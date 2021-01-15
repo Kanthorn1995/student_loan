@@ -1,5 +1,21 @@
 import React, { Component } from "react";
 import Link from "next/link";
+import { useRouter } from "next/router";
+
+const ActiveLink = ({ href, children }) => {
+  const router = useRouter();
+  let className = children.props.className || "";
+
+  if (router.pathname == href) {
+    className = `${className} active`;
+  }
+
+  return (
+    <React.Fragment>
+      {React.cloneElement(children, { className })}
+    </React.Fragment>
+  );
+};
 
 const ThemePublic = (Components) => {
   return class ClassRender extends Component {
@@ -60,21 +76,74 @@ const ThemePublic = (Components) => {
               <ul className="navbar-nav mr-auto">
                 {this.state.menuLeft.map((el) => {
                   return (
-                    <li className="nav-item" key={`${JSON.stringify(el)}`}>
-                      <Link href={el.path}>
-                        <a className="nav-link">{el.title}</a>
-                      </Link>
-                    </li>
+                    <ActiveLink href={el.path} key={`${JSON.stringify(el)}`}>
+                      <li className="nav-item">
+                        <Link href={el.path}>
+                          <a className="nav-link">{el.title}</a>
+                        </Link>
+                      </li>
+                    </ActiveLink>
                   );
                 })}
               </ul>
 
               <ul className="navbar-nav ml-auto">
-                <li className="nav-item">
-                  <Link href={"/login"}>
-                    <a className="nav-link">{"เข้าสู่ระบบ"}</a>
-                  </Link>
-                </li>
+                {(() => {
+                  if (this.props.userLogin) {
+                    return (
+                      <li className="nav-item">
+                        <div className="dropdown">
+                          <button
+                            className="btn btn-secondary"
+                            type="button"
+                            id="dropdownMenuButton"
+                            data-toggle="dropdown"
+                            aria-haspopup="true"
+                            aria-expanded="false"
+                          >
+                            <i className="fas fa-user"></i>&nbsp;&nbsp;
+                            {this.props.userLogin["firstNameThai"]}&nbsp;
+                            {this.props.userLogin["lastNameThai"]}
+                          </button>
+
+                          <div
+                            className="dropdown-menu dropdown-menu-right"
+                            aria-labelledby="dropdownMenuButton"
+                          >
+                            <Link href={"/home"}>
+                              <a className="dropdown-item">
+                                <i className="fas fa-user-cog"></i>
+                                &nbsp;&nbsp;จัดการข้อมูล
+                              </a>
+                            </Link>
+
+                            <a
+                              className="dropdown-item"
+                              href="#"
+                              onClick={() => {
+                                window.localStorage.clear();
+                                window.location.replace(
+                                  `${process.env.ssoLogout}`
+                                );
+                              }}
+                            >
+                              <i className="fas fa-sign-out-alt"></i>
+                              &nbsp;&nbsp;ออกจากระบบ
+                            </a>
+                          </div>
+                        </div>
+                      </li>
+                    );
+                  } else {
+                    return (
+                      <li className="nav-item">
+                        <Link href={"/login"}>
+                          <a className="nav-link">{"เข้าสู่ระบบ"}</a>
+                        </Link>
+                      </li>
+                    );
+                  }
+                })()}
               </ul>
             </div>
           </nav>

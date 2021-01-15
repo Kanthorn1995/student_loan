@@ -315,7 +315,7 @@ const Accordion = (props) => {
               }
 
               &__label {
-                margin-bottom: 1.5rem;
+                display: none;
               }
 
               &.accordion-design-active {
