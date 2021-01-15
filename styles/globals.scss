@@ -1,0 +1,27 @@
+html,
+body {
+  padding: 0;
+  margin: 0;
+}
+
+* {
+  box-sizing: border-box;
+  font-family: "Prompt", sans-serif !important;
+}
+
+.fa,
+.fas {
+  font-family: "Font Awesome 5 Free" !important;
+}
+
+.fab {
+  font-family: "Font Awesome 5 Brands" !important;
+}
+
+.box-padding {
+  padding: 15px;
+}
+
+.breadcrumb {
+  margin: unset !important;
+}

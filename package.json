@@ -1,0 +1,28 @@
+{
+  "name": "nextjs",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "cross-env MODE=dev next dev",
+    "build": "cross-env MODE=prod next build && next export",
+    "start": "next start"
+  },
+  "dependencies": {
+    "@material-ui/core": "^4.11.2",
+    "@material-ui/icons": "^4.11.2",
+    "axios": "^0.21.1",
+    "next": "10.0.1",
+    "next-router-events": "^2.1.0",
+    "react": "17.0.1",
+    "react-dom": "17.0.1",
+    "react-hook-form": "^6.14.0",
+    "sass": "^1.32.0",
+    "styled-components": "^5.2.1"
+  },
+  "devDependencies": {
+    "cross-env": "^7.0.3",
+    "dotenv": "^8.2.0",
+    "node-sass": "^5.0.0",
+    "styled-jsx-plugin-sass": "^1.0.0"
+  }
+}
