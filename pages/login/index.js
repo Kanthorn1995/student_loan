@@ -215,7 +215,7 @@ const Login = (props) => {
               </button>
             </div>
             <img
-              src={`${process.env.base_path}/log.svg`}
+              src={`${process.env.base_path}/RMUTI_KORAT.jpg`}
               className="image"
               alt=""
             />
@@ -232,7 +232,7 @@ const Login = (props) => {
               </button>
             </div>
             <img
-              src={`${process.env.base_path}/register.svg`}
+              src={`${process.env.base_path}/RMUTI_KORAT.jpg`}
               className="image"
               alt=""
             />

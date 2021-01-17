@@ -130,12 +130,17 @@ const Theme = (props) => {
     {
       pathname: "/student/borrow",
       title: "ข้อมูลกู้ยืมกองทุน กยศ.",
-      icon: "fas fa-home",
+      icon: "fas fa-user-graduate",
     },
     {
       pathname: "/student/history",
       title: "ประวัติการขอกู้ยืม",
-      icon: "fas fa-home",
+      icon: "fas fa-history",
+    },
+    {
+      pathname: "/test",
+      title: "ทดสอบ",
+      icon: "fas fa-cog",
     },
   ];
 
