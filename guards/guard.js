@@ -7,7 +7,7 @@ const Guard = (Components) => (props) => {
 
   React.useEffect(() => {
     if (props.userLogin == null) {
-      router.replace("/login");
+      // router.replace("/login");
     }
   }, []);
 
@@ -17,11 +17,14 @@ const Guard = (Components) => (props) => {
         if (props.userLogin != null) {
           return <Components {...props}></Components>;
         } else {
-          return (
+          return <Components {...props}></Components>;
+          {
+            /* return (
             <div className="spinner-border text-primary" role="status">
               <span className="sr-only">Loading...</span>
             </div>
-          );
+          ); */
+          }
         }
       })()}
     </React.Fragment>

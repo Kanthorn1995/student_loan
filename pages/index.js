@@ -18,6 +18,7 @@ const Index = (props) => {
     // } else {
     //   router.replace("/login");
     // }
+    return () => {};
   }, []);
 
   return (
