@@ -28,7 +28,7 @@ const StudentData101 = (props) => {
   };
   return (
     <div>
-      <h3>ข้อมูลส่วนตัวนักศึกษา</h3>
+      <h4>1.ข้อมูลส่วนตัวนักศึกษา</h4>
       <div className="row">
         <div className="col-lg-3 mb-3">
           <FormControl style={{ width: "100%" }}>
