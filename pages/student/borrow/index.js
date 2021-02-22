@@ -19,17 +19,41 @@ export default class Borrow extends Component {
           </ol>
         </nav>
 
-        <div className="box-padding">
+        <div className="box-padding ">
           <div className="mb-3">
-            <Link href="/student/borrow/term1">
-              <a>เทอม 1</a>
-            </Link>
-          </div>
-
-          <div>
-            <Link href="/student/borrow/term2">
-              <a>เทอม 2</a>
-            </Link>
+            <div className="card">
+              <div className="card-body ">
+                <h1 className="center">
+                  กองทุนให้กูยิมเพื่อการศึกษา มทร.อีสานยินดีต้อนรับ
+                </h1>
+                <div className="center">
+                  <img
+                    src={
+                      "https://www.studentloan.or.th/sites/default/files/user/images/logo%E0%B8%81%E0%B8%A2%E0%B8%A8%20%E0%B8%A2%E0%B9%88%E0%B8%AD%20%282%29-01_2.jpg"
+                    }
+                    width={"550px"}
+                  />
+                </div>
+                <h1 className="center">โปรดเลือกปีการศึกษาและภาคการศึกษา</h1>
+                <Link href="/student/borrow/term1">
+                  <a>
+                    <h3 className="center">
+                      ปีการศึกษา {new Date().getFullYear() + 543} ภาคเรียนที่ 1
+                    </h3>
+                  </a>
+                </Link>
+                <div>
+                  <Link href="/student/borrow/term2">
+                    <a>
+                      <h3 className="center">
+                        ปีการศึกษา {new Date().getFullYear() + 543} ภาคเรียนที่
+                        2
+                      </h3>
+                    </a>
+                  </Link>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </Theme>

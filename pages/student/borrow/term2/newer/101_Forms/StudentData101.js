@@ -6,7 +6,6 @@ import FormControl from "@material-ui/core/FormControl";
 import Select from "@material-ui/core/Select";
 import Grid from "@material-ui/core/Grid";
 import { makeStyles } from "@material-ui/core/styles";
-
 const StudentData101 = (props) => {
   //คำนำหน้า
   const [age, setAge] = React.useState("");

@@ -27,7 +27,7 @@ const Index = (props) => {
         <div className="col-lg-4 col-xl-3 mb-3">
           <div className="card">
             <div className="card-body">
-              This is some text within a card body.
+              <h1>ข่าวสาร กยศ.</h1>
             </div>
           </div>
         </div>
@@ -35,7 +35,12 @@ const Index = (props) => {
         <div className="col-lg-8 col-xl-9">
           <div className="card">
             <div className="card-body">
-              This is some text within a card body.
+              <img
+                src={
+                  "https://www.studentloan.or.th/sites/default/files/images/news/covid2-01.jpg"
+                }
+                style={{ width: "90%" }}
+              />
             </div>
           </div>
         </div>

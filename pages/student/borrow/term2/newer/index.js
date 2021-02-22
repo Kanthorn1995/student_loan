@@ -6,8 +6,6 @@ import ParentStudent101 from "./101_Forms/ParentStudent101";
 import StudentAddress101 from "./101_Forms/StudentAddress101";
 import StudentData101 from "./101_Forms/StudentData101";
 import StudentLoanHistory101 from "./101_Forms/StudentLoanHistory101";
-import MarriageStatus101 from "./101_Forms/MarriageStatus101";
-import GuaranteeIncome from "./102_Forms/GuaranteeIncome";
 
 const Accordion = (props) => {
   React.useEffect(() => {
@@ -156,12 +154,6 @@ const Accordion = (props) => {
                     <ParentStudent101 {...props} typeParent="spouse" />
                   </div>
                 </div>
-
-                <div className="card mb-3">
-                  <div className="card-body">
-                    <MarriageStatus101 {...props} />
-                  </div>
-                </div>
               </div>
             </article>
 
@@ -172,11 +164,6 @@ const Accordion = (props) => {
             >
               <h4 className="accordion-design-item__label">กยศ.102</h4>
               <div className="accordion-design-item__container">
-                <div className="card mb-3">
-                  <div className="card-body">
-                    <GuaranteeIncome {...props} />
-                  </div>
-                </div>
                 <p>
                   Lorem ipsum dolor sit amet, consectetur adipisicing elit.
                   Voluptates, deserunt minima? Ut facere minus, ipsa dolore

@@ -22,21 +22,57 @@ export default class Term1 extends Component {
             </li>
           </ol>
         </nav>
+
         <div className="box-padding">
-          <div>
-            <Link href="/student/borrow/term1/newer">
-              <a>รายใหม่</a>
-            </Link>
-          </div>
-          <div>
-            <Link href="/student/borrow/term1/newmove">
-              <a>รายเก่าย้ายสถานศึกษาหรือเปลี่ยนระดับชั้น</a>
-            </Link>
-          </div>
-          <div>
-            <Link href="/student/borrow/term1/older">
-              <a>รายเก่า</a>
-            </Link>
+          <div class="card">
+            <div class="card-body">
+              <div>
+                <h4 className="mb-4">
+                  <strong>ข้อมูลกู้ยืมกองทุน</strong> (ภาคเรียนที่ 1)
+                </h4>
+                <div>
+                  <Link href="/student/borrow/term1/newer">
+                    <a>
+                      <div className="flex">
+                        <div>
+                          {" "}
+                          <i className="fas fa-user-plus mr-2  fa-2x mb-3"></i>
+                        </div>
+
+                        <h5>ผู้กู้รายใหม่</h5>
+                      </div>
+                    </a>
+                  </Link>
+                </div>
+                <div>
+                  <Link href="/student/borrow/term1/newmove">
+                    <a>
+                      <div className="flex">
+                        <div>
+                          {" "}
+                          <i className="fas fa-user-tag mr-2  fa-2x mb-3"></i>
+                        </div>
+
+                        <h5>ผู้กู้รรายเก่าย้ายสถานศึกษาหรือเปลี่ยนระดับชั้น</h5>
+                      </div>
+                    </a>
+                  </Link>
+                </div>
+                <div>
+                  <Link href="/student/borrow/term1/older">
+                    <a>
+                      <div className="flex">
+                        <div>
+                          <i className="fas fa-user mr-3  fa-2x mb-3"></i>
+                        </div>
+
+                        <h5>ผู้กู้รายเก่า</h5>
+                      </div>
+                    </a>
+                  </Link>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </Theme>
